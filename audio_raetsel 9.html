@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio-Rätsel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .tip {
+            display: none;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+	img {
+       	 max-width: 150%;
+         height: auto;
+         margin-top: 10px;
+    }
+    .tip img {
+        width: 200px; /* Bildbreite anpassen */
+        height: auto; /* Automatische Höhe für Proportionen */
+    }
+    </style>
+    <script>
+        function showTip(id) {
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Audio-Rätsel</h1>
+    <p>Höre dir die Musik an und sortiere die Stücke nach Filmen!</p>
+
+    <!-- Audio-Player -->
+    <audio controls>
+        <source src="https://www.dropbox.com/scl/fi/g0iwo5pbgt59o84m87dpx/9.m4a?rlkey=vaq9fnjz8m4jhszm93sxsofpk&dl=1" type="audio/mpeg">
+        Dein Browser unterstützt keine Audio-Wiedergabe.
+    </audio>
+
+    <!-- Tipp-Buttons und Felder, immer unter dem Audio-Player -->
+    <div>
+        <button onclick="showTip('tip1')">Tipp 1</button>
+        <p id="tip1" class="tip">Episch und majestätisch, untermalt es die Rückkehr des Königs.</p>
+    </div>
+
+    <div>
+        <button onclick="showTip('tip2')">Tipp 2</button>
+        <p id="tip2" class="tip"> <img src="https://www.dropbox.com/scl/fi/47e8dxzdh8eo1fly1fc2d/9.jpeg?rlkey=s2pp93inb0b6fi4z4zrjqyunk&dl=1"</p>
+    </div>
+</body>
+</html>
